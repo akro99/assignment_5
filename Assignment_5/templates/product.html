@@ -1,0 +1,40 @@
+{% extends "base_A6.html" %}
+{% block header %}
+  <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+            <div class="text-center my-5">
+               
+                <h1 class="text-white fs-3 fw-bolder">Product</h1>
+                <p class="text-white-100 mb-0">🧴🎀👛</p>
+            </div>
+        </header>
+{% endblock %}
+{% block content %}
+<!-- Main Content-->
+<div class="container">
+     <div class="row">
+         <div class="col">
+             <b>Name</b>
+        </div>
+        <div class="col">
+            <b>Brand</b>        
+         </div>
+        <div class="col">
+            <b>Price</b>
+        </div>     
+     </div>
+    {% for row in  entries  %}
+    <div class="row">
+        <div class="col">
+                 {{ row["Name"] }}
+        </div>
+        <div class="col">
+                 {{ row["Brand"] }}
+        </div>
+        <div class="col">
+                 {{ row["Price"] }}
+        </div>     
+    </div><!-- end row -->
+    {% endfor %}
+</div><!-- end container -->
+{% endblock %}
